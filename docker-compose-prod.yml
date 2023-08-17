@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+    app:
+        container_name: emanager-dashboard-prod
+        build:
+          dockerfile: Dockerfile-prod
+          context: .
+        restart: always
+        volumes:
+            - '.:/app'
+        ports:
+            - '3000:3000'
+
